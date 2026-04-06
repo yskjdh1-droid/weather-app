@@ -1,16 +1,25 @@
-# React + Vite
+# 📝 개인 과제 최종 보고서: Weather Dashboard Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 1. 실험의 목적과 범위
+* **목적:** OpenWeatherMap API를 활용하여 실시간 날씨 데이터를 가져오고, 사용자에게 시각적으로 최적화된 날씨 정보를 제공하는 React 기반 웹 애플리케이션 구현.
+* **범위:** * **포함:** 현재 위치 기반/도시 검색 날씨 정보, 24시간 시간별 기온 예보, 날씨 상태에 따른 배경화면 동적 변경 기능.
+    * **불포함:** 과거 날씨 이력 조회, 미세먼지 상세 정보 등.
 
-Currently, two official plugins are available:
+### 2. 분석 (기능 목록)
+* **유스케이스:** 1. 사용자가 도시명 입력 
+    2. API 호출하여 데이터 수신 
+    3. 현재 날씨 및 24시간 예보 화면 출력.
+* **명세서:** * 입력: 도시 이름 (문자열)
+    * 출력: 온도, 습도, 풍속, 날씨 설명, 동적 배경 이미지.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 3. 설계 및 구현
+* **알고리즘:** Fetch/Axios를 통한 비동기 데이터 수신 및 React State를 활용한 실시간 UI 업데이트.
+* **개발 환경:** React.js, Vite, OpenWeatherMap API, JavaScript(ES6+).
 
-## React Compiler
+### 4. 실험 및 결과
+* **테스트:** 'Seoul', 'Gyeongju' 등 주요 도시 검색 시 해당 지역의 기온과 날씨 아이콘이 정상 출력됨을 확인.
+* **결과:** 날씨 상태(Rain, Clear 등)에 따라 배경 이미지가 부드럽게 전환됨.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 5. 결론
+* API 연동을 통한 데이터 시각화 과정을 숙달함. 
+* React의 컴포넌트 구조와 동적 스타일링 기법을 실전 프로젝트에 적용 완료함.
