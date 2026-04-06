@@ -7,7 +7,8 @@ export default function SearchBar({ city, setCity, fetchWeather, handleCurrentLo
       {/* 현재 위치 버튼 */}
       <button className="icon-button" onClick={handleCurrentLocation}>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+          <circle cx="12" cy="10" r="3" />
         </svg>
       </button>
 
@@ -31,9 +32,8 @@ export default function SearchBar({ city, setCity, fetchWeather, handleCurrentLo
                 ...String(label).split(/[\s,]+/)
               ].map(p => p.trim()).filter(p => p.length > 0);
 
-              // 3. [핵심 추출 로직] 
+              // 3. [핵심 추출 로직]
               // '한글이 없고' + '영어 알파벳이 있으며' + '국가명이 아닌' 단어를 찾습니다.
-              // 결과: "서울" (탈락), "South" (탈락), "Seoul" (당첨!)
               let englishCity = allParts.find(part => {
                 const isEnglish = /[A-Za-z]/.test(part);
                 const hasNoKorean = !/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/.test(part);
@@ -70,9 +70,10 @@ export default function SearchBar({ city, setCity, fetchWeather, handleCurrentLo
       </div>
 
       {/* 검색 버튼 */}
-      <button className="icon-button" onClick={() => { if(city) fetchWeather({ city }) }}>
+      <button className="icon-button" onClick={() => { if (city) fetchWeather({ city }) }}>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.3-4.3" />
         </svg>
       </button>
     </div>
