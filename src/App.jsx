@@ -57,8 +57,6 @@ const fetchWeather = (params) => {
       if (data1.cod === 200 || data1.cod === "200") {
         setWeather(data1);
         setErrorMsg(""); 
-        // 💡 중요: 사용자가 입력한 도시명과 API가 반환한 영문명이 다를 수 있으므로 
-        // 굳이 다시 setCity를 하지 않거나, 성공 시에만 신중하게 처리합니다.
       } else {
         setErrorMsg("잘못된 도시명입니다. 다시 확인해 주세요!");
       }
